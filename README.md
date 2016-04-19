@@ -6,5 +6,5 @@
 
 * A logged in user can view all profiles but can only edit their own profile.
 
-* Other Node.js module used for this are flash messages, bcrypt-nodejs for proper salting and hashing of password as well as proper hashed password comparing for logging in, mongoose for model creation of users, and pug/jade for template building.
+* Other Node.js module used for this are flash messages, bcrypt-nodejs for proper salting and hashing of passwords as well as proper hashed password comparing for logging in, mongoose for model creation of user objects, and pug/jade for template building.
 
