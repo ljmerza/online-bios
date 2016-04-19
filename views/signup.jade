@@ -1,0 +1,12 @@
+include _header.jade
+
+.container
+	h1 Sign up
+
+	form(action="/signup" method="post")
+		.row
+			input.form-control(name="username" type="text" placeholder="Username" required autofocus)
+		.row
+			input.form-control(name="password" type="password" placeholder="Password" required)
+		.row
+			input.btn.btn-primary.btn-block(type="submit" value="Sign up")

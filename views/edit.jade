@@ -1,0 +1,11 @@
+include _header.jade
+block content
+.container
+	h1 Edit your profile
+
+	form(action="/edit" method="post")
+		input.form-control(name="displayname" type="text" value=currentUser.displayName)
+
+		textarea.form-control(name="bio" value=currentUser.bio)= currentUser.bio
+
+		input.btn.btn-primary.btn-block(type="submit" value="Update")

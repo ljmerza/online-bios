@@ -1,0 +1,11 @@
+include _header.jade
+
+block content
+.container
+  h1 Welcome to Online Bios!
+
+  for user in users
+    .panel.panel-default
+      .panel-heading
+        a(href="/users/"+user.username)= user.username
+      .panel-body= user.bio

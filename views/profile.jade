@@ -1,0 +1,14 @@
+include _header.jade
+block content
+.container
+	if currentUser && currentUser.id === user.id
+		a.pull-right(href="/edit") Edit your profile
+
+	h1= user.username
+	h6 Joined on 
+		=user.createdAt
+
+	if user.bio
+		h1 Bio
+		p= user.bio
+

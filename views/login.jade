@@ -1,0 +1,18 @@
+include _header.jade
+block content
+	.container
+		form.form-signin(action="/login" method="post")
+			.row
+				h2.form-signin-heading Please sign in
+				label.sr-only(for="username") Username
+				input.form-control(id="username" name='username' placeholder="Username" required autofocus)
+			.row
+				label.sr-only(for="password") Password
+				input(type="password" id="password" name='password' class="form-control" placeholder="Password" required)
+			.row
+				.checkbox
+					label
+					input(type="checkbox" value="remember-me") 
+					| Remember me
+			.row
+				button.btn.btn-lg.btn-primary.btn-block(type="submit") Sign in

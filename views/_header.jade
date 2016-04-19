@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Online Bios
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+      
+  body
+    .navbar.navbar-default.navbar-static-top(role="navigation")
+      .container
+
+        .navbar-header
+          a(class="navbar-brand" href="/") Online Bios
+        ul(class="nav navbar-nav navbar-right")
+
+          // if user logged in the show logged in links
+          if currentUser
+            li
+              a(href="/edit")= currentUser.username
+            li
+              a(href="/logout") Log out
+          else
+            li
+              a(href="/login") Log in
+            li
+              a(href="/signup") Sign up
+
+      // for any errors or info that show in server flash messages
+      .container
+        each error in errors
+          .alert.alert-danger(role="alert")= error
+        each info in infos
+          .alert.alert-info(role="alert")= info
+
+      block content
